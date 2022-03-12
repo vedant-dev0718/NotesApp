@@ -22,28 +22,27 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/edt_txt_backg"
             android:fontFamily="@font/product_sans_regular"
-            android:gravity="start"
-            android:hint="Title..."
-            android:padding="15dp"
+            android:hint="Write Your Title..."
+            android:paddingStart="10dp"
             tools:layout_editor_absoluteX="6dp"
             tools:layout_editor_absoluteY="59dp" />
+
 
         <EditText
             android:id="@+id/updateSubtitle"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/edt_txt_backg"
             android:fontFamily="@font/product_sans_regular"
-            android:gravity="start"
-            android:hint="SubTitile"
-            android:padding="15dp"
+            android:hint="Write Your Subtitle....."
+            android:paddingStart="10dp"
             tools:layout_editor_absoluteX="6dp"
             tools:layout_editor_absoluteY="117dp" />
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,7 +64,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/product_sans_regular"
-                android:text="Priority"
+                android:text="Priority Level"
                 android:textColor="@color/black" />
 
             <ImageView
@@ -90,21 +89,21 @@
                 app:srcCompat="@drawable/green_shape" />
 
 
-
         </LinearLayout>
 
         <EditText
             android:id="@+id/updateNotes"
             android:layout_width="match_parent"
-            android:layout_height="315dp"
+            android:layout_height="360dp"
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:autofillHints="Write your notes........."
             android:background="@drawable/edt_txt_backg"
             android:fontFamily="@font/product_sans_regular"
             android:gravity="start"
-            android:hint="Notes"
+            android:hint="Write Your Notes......"
             android:padding="15dp"
             tools:layout_editor_absoluteX="9dp"
             tools:layout_editor_absoluteY="239dp" />

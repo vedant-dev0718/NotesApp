@@ -22,9 +22,8 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/edt_txt_backg"
             android:fontFamily="@font/product_sans_regular"
-            android:gravity="start"
             android:hint="Title..."
-            android:padding="15dp"
+            android:paddingStart="10dp"
             tools:layout_editor_absoluteX="6dp"
             tools:layout_editor_absoluteY="59dp" />
 
@@ -38,9 +37,8 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/edt_txt_backg"
             android:fontFamily="@font/product_sans_regular"
-            android:gravity="start"
             android:hint="SubTitile"
-            android:padding="15dp"
+            android:paddingStart="10dp"
             tools:layout_editor_absoluteX="6dp"
             tools:layout_editor_absoluteY="117dp" />
 

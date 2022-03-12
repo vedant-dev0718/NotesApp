@@ -8,6 +8,7 @@ import android.view.View;
 
 import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vedant.notesapp.Activity.InsertNotesActivity;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     TextView noFilter, HightoLow, LowToHigh;
     List<Notes> filternotesalllist;
     NotesAdapter  adapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
