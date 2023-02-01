@@ -8,17 +8,16 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vedant.notesapp.Model.Notes;
 import com.vedant.notesapp.R;
 import com.vedant.notesapp.ViewModel.NotesViewModel;
 import com.vedant.notesapp.databinding.ActivityInsertNotesBinding;
 
-
 import java.util.Date;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
 
 public class InsertNotesActivity extends AppCompatActivity {
 
@@ -28,22 +27,27 @@ public class InsertNotesActivity extends AppCompatActivity {
     FloatingActionButton mFloatingActionButton;
     String priority = "1";
     ImageView yellowPriority, greenPriority, redPriority;
-    EditText insertTitle,insertSubtitle,insertNotes;
+    EditText insertTitle, insertSubtitle, insertNotes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insert_notes);
+        binding = ActivityInsertNotesBinding.inflate(getLayoutInflater());
 
         notesViewModel = new ViewModelProvider(this).get(NotesViewModel.class);
+
         mFloatingActionButton = findViewById(R.id.doneNotesBtn);
         yellowPriority = findViewById(R.id.yellowPriority);
         redPriority = findViewById(R.id.redPriority);
         greenPriority = findViewById(R.id.greenPriority);
-         insertTitle = findViewById(R.id.insert_title);
-         insertSubtitle = findViewById(R.id.insert_subtitle);
-         insertNotes = findViewById(R.id.insert_notes);
-        binding = ActivityInsertNotesBinding.inflate(getLayoutInflater());
+        insertTitle = findViewById(R.id.insert_title);
+        insertSubtitle = findViewById(R.id.insert_subtitle);
+        insertNotes = findViewById(R.id.insert_notes);
+
+
         mFloatingActionButton.setOnClickListener(v -> {
+
             title = insertTitle.getText().toString();
             subtitle = insertSubtitle.getText().toString();
             notes = insertNotes.getText().toString();
@@ -55,7 +59,8 @@ public class InsertNotesActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-               greenPriority.setImageResource(R.drawable.layer);
+
+                greenPriority.setImageResource(R.drawable.layer);
                 redPriority.setImageResource(R.drawable.red_shape);
                 yellowPriority.setImageResource(R.drawable.yellow_shape);
 
@@ -100,6 +105,7 @@ public class InsertNotesActivity extends AppCompatActivity {
         notes1.notesDate = sequence.toString();
 
         notesViewModel.insertNote(notes1);
+
         Toast.makeText(this, "done", Toast.LENGTH_SHORT).show();
 //        startActivity(new Intent(this, MainActivity.class));
         finish();
