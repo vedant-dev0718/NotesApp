@@ -14,7 +14,7 @@ public abstract class NotesDatabase extends RoomDatabase {
 
     public abstract Dao notesDao();
     public static NotesDatabase INSTANCE;
-
+    
     public static NotesDatabase getDatabaseInstance(Context context) {
         if(INSTANCE==null)
         {

@@ -2,28 +2,28 @@ package com.vedant.notesapp.ViewModel;
 
 import android.app.Application;
 
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+
 import com.vedant.notesapp.Model.Notes;
 import com.vedant.notesapp.Repository.NotesRepo;
 
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.LiveData;
-
 public class NotesViewModel extends AndroidViewModel {
     public NotesRepo repo;
     public LiveData<List<Notes>> getAllNotes;
-    public LiveData<List<Notes>> hightolow;
-    public LiveData<List<Notes>> lowtohigh;
+    public LiveData<List<Notes>> highToLow;
+    public LiveData<List<Notes>> lowToHigh;
 
     public NotesViewModel(@NonNull Application application) {
         super(application);
 
         repo = new NotesRepo(application);
         getAllNotes = repo.getAllNotes;
-        hightolow = repo.hightolow;
-        lowtohigh = repo.lowtohigh;
+        highToLow = repo.hightolow;
+        lowToHigh = repo.lowtohigh;
     }
 
     public void insertNote(Notes notes) {

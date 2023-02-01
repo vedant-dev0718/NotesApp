@@ -26,7 +26,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.notesViewHol
     public NotesAdapter(MainActivity mainActivity, List<Notes> notes) {
         this.mainActivity = mainActivity;
         this.notes = notes;
-        allNotesItems = new ArrayList<Notes>();
+        allNotesItems = new ArrayList<>();
     }
 
     public void searchNotes(List<Notes> filteredName) {

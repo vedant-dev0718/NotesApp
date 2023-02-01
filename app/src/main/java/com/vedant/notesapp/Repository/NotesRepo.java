@@ -2,13 +2,13 @@ package com.vedant.notesapp.Repository;
 
 import android.app.Application;
 
+import androidx.lifecycle.LiveData;
+
 import com.vedant.notesapp.Dao.Dao;
 import com.vedant.notesapp.Database.NotesDatabase;
 import com.vedant.notesapp.Model.Notes;
 
 import java.util.List;
-
-import androidx.lifecycle.LiveData;
 
 public class NotesRepo {
 

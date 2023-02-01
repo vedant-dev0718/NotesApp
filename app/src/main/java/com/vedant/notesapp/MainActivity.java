@@ -8,7 +8,6 @@ import android.view.View;
 
 import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vedant.notesapp.Activity.InsertNotesActivity;
@@ -108,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         } else if (i == 2) {
-            notesViewModel.hightolow.observe(this, new Observer<List<Notes>>() {
+            notesViewModel.highToLow.observe(this, new Observer<List<Notes>>() {
                 @Override
                 public void onChanged(List<Notes> notes) {
                     setAdapter(notes);
@@ -116,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         } else if (i == 3) {
-            notesViewModel.lowtohigh.observe(this, new Observer<List<Notes>>() {
+            notesViewModel.lowToHigh.observe(this, new Observer<List<Notes>>() {
                 @Override
                 public void onChanged(List<Notes> notes) {
                     setAdapter(notes);

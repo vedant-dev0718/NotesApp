@@ -3,7 +3,6 @@ package com.vedant.notesapp.Activity;
 
 import android.os.Bundle;
 import android.text.format.DateFormat;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -55,39 +54,27 @@ public class InsertNotesActivity extends AppCompatActivity {
             CreateNotes(title, subtitle, notes);
         });
 
-        greenPriority.setOnClickListener(new View.OnClickListener() {
+        greenPriority.setOnClickListener(v -> {
 
-            @Override
-            public void onClick(View v) {
+            greenPriority.setImageResource(R.drawable.layer);
+            redPriority.setImageResource(R.drawable.red_shape);
+            yellowPriority.setImageResource(R.drawable.yellow_shape);
 
-                greenPriority.setImageResource(R.drawable.layer);
-                redPriority.setImageResource(R.drawable.red_shape);
-                yellowPriority.setImageResource(R.drawable.yellow_shape);
-
-                priority = "1";
-            }
+            priority = "1";
         });
-        redPriority.setOnClickListener(new View.OnClickListener() {
+        redPriority.setOnClickListener(v -> {
+            redPriority.setImageResource(R.drawable.layer);
+            greenPriority.setImageResource(R.drawable.green_shape);
+            yellowPriority.setImageResource(R.drawable.yellow_shape);
+            priority = "3";
 
-            @Override
-            public void onClick(View v) {
-                redPriority.setImageResource(R.drawable.layer);
-                greenPriority.setImageResource(R.drawable.green_shape);
-                yellowPriority.setImageResource(R.drawable.yellow_shape);
-                priority = "3";
-
-            }
         });
-        yellowPriority.setOnClickListener(new View.OnClickListener() {
+        yellowPriority.setOnClickListener(v -> {
+            yellowPriority.setImageResource(R.drawable.layer);
+            redPriority.setImageResource(R.drawable.red_shape);
+            greenPriority.setImageResource(R.drawable.green_shape);
+            priority = "2";
 
-            @Override
-            public void onClick(View v) {
-                yellowPriority.setImageResource(R.drawable.layer);
-                redPriority.setImageResource(R.drawable.red_shape);
-                greenPriority.setImageResource(R.drawable.green_shape);
-                priority = "2";
-
-            }
         });
     }
 
